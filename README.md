@@ -1,15 +1,20 @@
-# @sveltejs/adapter-node
+# adapter-node-ws
 
-[Adapter](https://svelte.dev/docs/kit/adapters) for SvelteKit apps that generates a standalone Node server.
+[Adapter](https://svelte.dev/docs/kit/adapters) for SvelteKit apps that generates a standalone Node server, and exposes it as `globalThis.HTTP_SERVER`
 
 ## Docs
 
 [Docs](https://svelte.dev/docs/kit/adapter-node)
 
-## Changelog
+`vite.config.js`:
+```js
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
+import {WebSocketDevPlugin } from `adapter-node-ws`; // add this line
 
-[The Changelog for this package is available on GitHub](https://github.com/sveltejs/kit/blob/main/packages/adapter-node/CHANGELOG.md).
+export default defineConfig({
+	plugins: [sveltekit(), WebSocketDevPlugin] // add the plugin
+});
+```
 
-## License
-
-[MIT](LICENSE)
+Anywhere in your server-side code `globalThis.HTTP_SERVER` will be the raw HTTP server provided by the built-in polka server.
