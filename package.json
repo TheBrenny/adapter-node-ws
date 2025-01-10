@@ -1,7 +1,7 @@
 {
-	"name": "@sveltejs/adapter-node",
+	"name": "adapter-node-ws",
 	"version": "5.2.11",
-	"description": "Adapter for SvelteKit apps that generates a standalone Node server",
+	"description": "Adapter for SvelteKit apps that generates a standalone Node server, and exposes it as `globalThis.HTTP_SERVER`",
 	"keywords": [
 		"adapter",
 		"deploy",
@@ -10,11 +10,6 @@
 		"svelte",
 		"sveltekit"
 	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/sveltejs/kit",
-		"directory": "packages/adapter-node"
-	},
 	"license": "MIT",
 	"homepage": "https://svelte.dev",
 	"type": "module",
@@ -37,8 +32,8 @@
 		"test": "echo \"tests temporarily disabled\" # vitest run",
 		"check": "tsc",
 		"lint": "prettier --check .",
-		"format": "pnpm lint --write",
-		"prepublishOnly": "pnpm build"
+		"format": "npm lint --write",
+		"prepublishOnly": "npm run build"
 	},
 	"devDependencies": {
 		"@polka/url": "^1.0.0-next.28",

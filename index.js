@@ -96,3 +96,13 @@ export default function (opts = {}) {
 		}
 	};
 }
+
+/**
+ * @type {import('vite').Plugin}
+ */
+export const WebSocketDevPlugin = {
+    name: "web-socket-dev-plugin",
+    configureServer(server) {
+        globalThis.HTTP_SERVER = server.httpServer;
+    }
+};
