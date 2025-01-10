@@ -12,10 +12,10 @@ export default function (opts = {}) {
 	const { out = 'build', precompress = true, envPrefix = '' } = opts;
 
 	return {
-		name: '@sveltejs/adapter-node',
+		name: 'adapter-node-ws',
 
 		async adapt(builder) {
-			const tmp = builder.getBuildDirectory('adapter-node');
+            const tmp = builder.getBuildDirectory('adapter-node-ws');
 
 			builder.rimraf(out);
 			builder.rimraf(tmp);

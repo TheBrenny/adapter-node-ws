@@ -1,4 +1,4 @@
 .DS_Store
 node_modules
-# /files # we actually need this dir pushed to the git repo
+/files
 coverage/
