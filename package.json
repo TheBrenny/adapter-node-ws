@@ -37,7 +37,7 @@
 	},
 	"devDependencies": {
 		"@polka/url": "^1.0.0-next.28",
-		"@sveltejs/kit": "^2.9.0",
+		"@sveltejs/kit": "^2.20.6",
 		"@sveltejs/vite-plugin-svelte": "^5.0.1",
 		"@types/node": "^18.19.48",
 		"polka": "^1.0.0-next.28",
